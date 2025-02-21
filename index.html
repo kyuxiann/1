@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白水哥之测卷一</title>
+</head>
+<body>
+    <h1 id="h1">刷牙了吗</h1>
+    <div class="gif">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExazZ5eTgzamE2dGhqZzlkZ3R4dGdoemQ5MzFrODNwcjRpOG12bmQzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6EpecYmJhUaaUtoC9t/giphy.gif">
+    </div>
+    <div class="buttons" style="width: 50%">        
+        <button onclick = "location.href='yes.html'" class="yes" id="yes" role="button" style="width: 25%">刷了</button>
+        <button class="no" id="no" type="button" style="width: 25%" onclick="myFunction()">还没</button>
+    </div>
+</body>
+
+
+<style>
+body {
+    background-color: #ffd1dc;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    width: 100%;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.buttons button {
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    padding: 10px 16px;
+    width: 120px;
+}
+
+.buttons button:hover {
+    background-color: #F082AC;
+}
+</style>
+
+<script>
+    let no = document.getElementById('no');
+    let position;
+    no.addEventListener("click", () => {
+        position = position ? 0 : 100;
+        no.style.transform = 'translate(' + position + 'px,0px)';
+    })
+
+</script>
+</html>
